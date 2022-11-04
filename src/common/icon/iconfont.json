@@ -1,0 +1,93 @@
+{
+  "id": "3718594",
+  "name": "xiaogang",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2678619",
+      "name": "曝光",
+      "font_class": "puguang",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "5042485",
+      "name": "电源",
+      "font_class": "dianyuan",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "7124637",
+      "name": "风扇",
+      "font_class": "fengshan",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "11719608",
+      "name": "门禁",
+      "font_class": "menjin",
+      "unicode": "e680",
+      "unicode_decimal": 59008
+    },
+    {
+      "icon_id": "11760211",
+      "name": "前门",
+      "font_class": "qianmen",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "14802311",
+      "name": "统一网关",
+      "font_class": "tongyiwangguan",
+      "unicode": "e6b5",
+      "unicode_decimal": 59061
+    },
+    {
+      "icon_id": "5217274",
+      "name": "门把手",
+      "font_class": "guigetubiao-",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "1305048",
+      "name": "温度",
+      "font_class": "wendu",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "12189383",
+      "name": "长按至震动",
+      "font_class": "changanzhizhendong",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "19117414",
+      "name": "门磁",
+      "font_class": "menci",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "21237426",
+      "name": "气压",
+      "font_class": "qiya",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "21428130",
+      "name": "温湿度",
+      "font_class": "wenshidu",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    }
+  ]
+}

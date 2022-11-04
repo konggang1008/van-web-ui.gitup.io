@@ -1,0 +1,343 @@
+@mixin position-absolute($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin width-height($W,$h){
+  width: $W;
+  height: $h;
+}
+@mixin margin-value($top, $right, $bottom, $left){
+  margin: $top, $right, $bottom, $left;
+}
+@mixin margin-auto($value){
+  margin:$value auto;
+}
+@mixin position-absolute-bottom($top, $right, $left) {
+  position: absolute;
+  left: $left;
+  right: $right;
+  top: $top;
+}
+@mixin position-absolute-left($top, $right, $bottom) {
+  position: absolute;
+  top: $top;
+  right:  $right;
+  bottom: $bottom;
+}
+@mixin position-absolute-top($left, $right) {
+  position: absolute;
+  left: $left;
+  right: $right;
+}
+@mixin position-absolute-right($top, $right) {
+  position: absolute;
+  right: $right;
+  top: $top;
+}
+@mixin position-absolute-tole($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+@mixin position-absolute-bottome($right, $bottom) {
+  position: absolute;
+  right: $right;
+  bottom: $bottom;
+}
+@mixin position-absolute-letbottome($left, $bottom) {
+  position: absolute;
+  left: $left;
+  bottom: $bottom;
+}
+@mixin  background-img(){
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+// 文字一行隐藏
+@mixin no-wrap {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+// 文字两行隐藏
+@mixin no-wrap-two-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+// 背景
+@mixin bg-style {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+// 文字居中
+@mixin table-center {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+@mixin poa-center($w, $h) {
+  position: absolute;
+  width: $w;
+  height: $h;
+  left: 50%;
+  top: 50%;
+  transition: translate(-50%, -50%);
+}
+
+@mixin extend-click {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+  }
+}
+
+@mixin t-overflow($line: 1) {
+  @if $line==1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@mixin position-center($w, $h) {
+  position: absolute;
+  width: $w;
+  height: $h;
+  left: 50%;
+  top: 50%;
+  transition: translate(-50%, -50%);
+}
+//左右排列居中
+@mixin center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+//上下排列居中
+@mixin center-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+//垂直居中，从头开始布局
+@mixin center-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+//垂直居中 从后往前
+@mixin center-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+//两端对齐 中间平分
+@mixin space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+//上下排列两端对齐
+@mixin space-between-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+//左右排列自由分配距离
+@mixin space-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+//上下排列自由分配距离
+@mixin space-around-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+//左右自动分配距离,超出盒子范围换行
+@mixin space-around-wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* 超过一行显示省略号 */
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+//定位上下左右居中
+@mixin position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin  space-between-nocenter{
+    display: flex;
+  justify-content: space-between;
+}
+@mixin no-wrap {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin no-wrap-two-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+@mixin bg-style {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin table-center {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+@mixin poa-center($w, $h) {
+  position: absolute;
+  width: $w;
+  height: $h;
+  left: 50%;
+  top: 50%;
+  transition: translate(-50%, -50%);
+}
+
+@mixin extend-click {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+  }
+}
+
+@mixin t-overflow($line: 1) {
+  @if $line==1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@mixin position-center($w, $h) {
+  position: absolute;
+  width: $w;
+  height: $h;
+  left: 50%;
+  top: 50%;
+  transition: translate(-50%, -50%);
+}
+//上下左右排列居中
+@mixin center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+//垂直居中，从头开始布局
+@mixin center-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+//垂直居中 从后往前
+@mixin center-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+//两端对齐 中间平分
+@mixin space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+// 两端平分  中间居中
+@mixin space-between-column {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+//左右自动分配距离,超出盒子范围换行
+@mixin space-around-wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* 超过一行显示省略号 */
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+//定位上下左右居中
+@mixin position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin   direction-column{
+  display: flex;
+  flex-direction: column;
+}    
+
+
+@mixin  space-between-nocenter{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+@mixin   direction-column-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}  

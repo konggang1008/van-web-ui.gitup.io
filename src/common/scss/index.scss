@@ -1,0 +1,189 @@
+#index {
+  color: #D3D6DD;
+  width: 1920px;
+  height: 1080px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: left top;
+  overflow: hidden;
+  
+  .bg {
+    width: 100%;
+    height: 100%;
+    padding: 16px 16px 0 16px;
+    background-image: url("../assets/pageBg.png");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .host-body {
+    .dv-dec-10,
+    .dv-dec-10-s {
+      width: 33.3%;
+      height: 5px;
+    }
+    .dv-dec-10-s {
+      transform: rotateY(180deg);
+    }
+    .dv-dec-8 {
+      width: 200px;
+      height: 50px;
+    }
+    .title {
+      position: relative;
+      width: 500px;
+      text-align: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      .title-text {
+        font-size: 24px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+      }
+
+      .dv-dec-6 {
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        width: 250px;
+        height: 8px;
+        transform: translate(-50%);
+      }
+    }
+
+    // 第二行
+    .aside-width {
+      width: 40%;
+    }
+    .react-r-s,
+    .react-l-s {
+      background-color: #0f1325;
+    }
+
+    // 平行四边形
+    .react-right {
+      &.react-l-s {
+        text-align: right;
+        width: 500px;
+      }
+      font-size: 18px;
+      width: 300px;
+      line-height: 50px;
+      text-align: center;
+      transform: skewX(-45deg);
+
+      .react-after {
+        position: absolute;
+        right: -25px;
+        top: 0;
+        height: 50px;
+        width: 50px;
+        background-color: #0f1325;
+        transform: skewX(45deg);
+      }
+
+      .text {
+        display: inline-block;
+        transform: skewX(45deg);
+      }
+    }
+
+    .react-left {
+      &.react-l-s {
+        width: 500px;
+        text-align: left;
+      }
+      font-size: 18px;
+      width: 300px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      transform: skewX(45deg);
+      background-color: #0f1325;
+
+      .react-left {
+        position: absolute;
+        left: -25px;
+        top: 0;
+        height: 50px;
+        width: 50px;
+        background-color: #0f1325;
+        transform: skewX(-45deg);
+      }
+
+      .text {
+        display: inline-block;
+        transform: skewX(-45deg);
+      }
+    }
+
+    .body-box {
+      margin-top: 16px;
+      display: flex;
+      // flex-direction: column;
+      justify-content: space-between;
+      //下方区域的布局
+      .content-box,
+      .devict,
+       .altre{
+        flex:1; 
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .content-box{
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+::v-deep .el-form-item {
+  margin: 0 5px !important;
+}
+::v-deep .el-table,
+.el-table__expanded-cell {
+  background-color: transparent !important;
+}
+
+::v-deep .el-table th {
+  background-color: transparent !important;
+  border-bottom: 1px solid #5078fc !important;
+  color: #fefefe !important;
+}
+::v-deep .el-table tr {
+  background-color: transparent !important;
+}
+::v-deep .el-table--enable-row-transition .el-table__body td,
+::v-deep .el-table .cell {
+  background-color: transparent !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  border: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+::v-deep .el-table th > .cell {
+  color: rgba(254, 254, 254, 1) !important;
+  font-weight: 700 !important;
+}
+.el-table::before {
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 0px !important;
+}
+
+::v-deep .el-form-item__label {
+  color: white !important;
+}
+::v-deep .el-date-editor {
+  background-color: transparent !important;
+}
+::v-deep .el-range-input {
+  background-color: transparent !important;
+}

@@ -1,0 +1,280 @@
+@import '@/common/css/variable.scss';
+
+label {
+  font-weight: 700;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all .3s linear
+}
+
+.slide-enter,
+.slide-leave-to {
+  opacity: 0
+}
+
+.swipe-enter-active,
+.swipe-leave-active {
+  transition: all 0.3s linear
+}
+
+.swipe-enter,
+.swipe-leave-to {
+  transform: translate(100%, 0)
+}
+
+.gem-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.gem-back-header {
+  padding: 0 0 16px;
+}
+
+.label-title {
+  position: relative;
+  padding-left: 30px;
+  font-size: 20px;
+  white-space: nowrap;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    width: 20px;
+    height: 4px;
+    border-radius: 4px;
+    background: $theme-gradient-color
+  }
+}
+
+.iconfont {
+  &.brand {
+    color: #409EFF;
+  }
+
+  &.danger {
+    color: #F56C6C;
+  }
+
+  &.warning {
+    color: #E6A23C;
+  }
+
+  &.success {
+    color: #67C23A;
+  }
+}
+
+
+
+/* fade-transform */
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all .5s;
+}
+
+.fade-transform-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/* fade-transform-bottom */
+.fade-transform-bottom-leave-active,
+.fade-transform-bottom-enter-active {
+  transition: all .5s;
+}
+
+.fade-transform-bottom-enter {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-transform-bottom-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+
+/* breadcrumb transition */
+.breadcrumb-enter-active,
+.breadcrumb-leave-active {
+  transition: all .5s;
+}
+
+.breadcrumb-enter,
+.breadcrumb-leave-active {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.breadcrumb-move {
+  transition: all .5s;
+}
+
+.breadcrumb-leave-active {
+  position: absolute;
+}
+
+.mb8 {
+  margin-bottom: 8px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb16 {
+  margin-bottom: 16px;
+}
+
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+//浏览器隐藏滚动条
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+  background-color: #CBCBCB;
+}
+
+.container-grey {
+  background-color: #FAFAFA;
+}
+
+.container-white {
+  background-color: #FFFFFF;
+}
+.notity-click {
+  cursor: pointer;
+}
+// 解决elementUI的下拉菜单有一个像素的突出，自身样式问题
+.el-menu {
+  border-right-width: 0;
+}
+
+.el-range-separator {
+  box-sizing: content-box;
+}
+
+.my-table-cell {
+  background-color: $light-theme-color !important;
+}
+
+// 部分element ui样式修改
+.gem-form .el-cascader {
+  width: 100%;
+}
+
+.gem-form .el-date-editor {
+  width: 100%;
+}
+
+.gem-form .el-input-number {
+  width: 100%;
+}
+
+.el-upload__tip {
+  line-height: 18px;
+}
+
+.task-borard .el-tree-node__content {
+  height: auto !important;
+}
+
+.el-date-editor--datetimerange.el-input,
+.el-date-editor--datetimerange.el-input__inner,
+.el-date-editor--daterange.el-input__inner,
+.el-cascader {
+  width: 100%;
+}
+
+.el-card__body {
+  padding: 12px 12px
+}
+
+.el-tag {
+  margin-right: 12px;
+}
+
+.el-radio__input.is-disabled.is-checked .el-radio__inner::after {
+  background-color: $theme-color;
+}
+
+.el-radio__input.is-disabled.is-checked .el-radio__inner::after {
+  width: 8px;
+  height: 8px;
+}
+
+.el-checkbox__input.is-disabled.is-checked .el-checkbox__inner::after {
+  border-color: $theme-color;
+}
+
+.el-table .el-table__fixed-header-wrapper th,
+.el-table .el-table__header-wrapper th {
+  word-break: break-word;
+  background-color: #f8f8f9;
+  color: #515a6e;
+  height: 40px;
+  font-size: 13px;
+}
+
+.el-divider__text {
+  color: #999999;
+}
+
+.el-collapse-item__content {
+  padding-bottom: 10px !important;
+}
+
+.el-card.is-always-shadow {
+  box-shadow: unset !important;
+}
+
+.el-menu-item i {
+  color: inherit;
+}
+
+.el-menu-item.is-active {
+  background: $theme-gradient-color;
+}
+.select-width {
+  width: 100% !important;
+}
+.baseInfo {
+  .infoPart {
+    text-align: center;
+    font-size: 14px;
+    padding: 0 5px;
+    color: rgba(0, 0, 0, 0.65);
+    .el-badge {
+      line-height: 50%;
+      margin: 0 3px;
+    }
+  }
+}

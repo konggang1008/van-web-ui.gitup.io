@@ -1,0 +1,169 @@
+// 从下往上
+.top-bottom {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  transform-origin: 0 0;
+}
+.top-bottom::before {
+  content: '';
+  position: absolute;
+  // border-radius: 0 50% 0 0;
+  width: 30%;
+  /* 这里修改线条的高度，同时top减去的值是高度的一半（为了保持垂直居中） */
+  height: 800%;
+  right: 35%;
+  /* 这里修改线条的颜色（可以达到渐变） */
+  background: repeating-linear-gradient(
+    180deg,
+    #e0eeff 0,
+    rgb(162, 221, 244) calc(10vw * 100 / 1920),
+    #8ad9e9 calc(10vw * 100 / 1920),
+    #72b1e8 calc(20vw * 100 / 1920)
+  );
+}
+@keyframes flowbottom {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+//从上往下
+.bottom-top {
+  border-radius: 0 20px 0 0;
+}
+.bottom-top::before {
+  content: '';
+  position: absolute;
+  border-radius: 0 50% 0 0;
+  top: 0;
+  width: 30%;
+  /* 这里修改线条的高度，同时top减去的值是高度的一半（为了保持垂直居中） */
+  height: 200%;
+  right: 35%;
+  /* 这里修改线条的颜色（可以达到渐变） */
+  background: repeating-linear-gradient(
+    180deg,
+    #e0eeff 0,
+    rgb(162, 221, 244) calc(5vw * 100 / 1920),
+    #8ad9e9 calc(5vw * 100 / 1920),
+    #72b1e8 calc(10vw * 100 / 1920)
+  );
+  animation: flowtop linear 8s 100000;
+}
+@keyframes flowtop {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+//从左到右
+.left-right {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-top: calc(2vh * 100 / 1080) solid #00eaf7;
+  border-bottom: calc(2vh * 100 / 1080) solid #00eaf7;
+}
+
+.left-right::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  /* 这里修改线条的高度，同时top减去的值是高度的一半（为了保持垂直居中） */
+  height: 30%;
+  top: 35%;
+  /* 这里修改线条的颜色（可以达到渐变） */
+  background: repeating-linear-gradient(
+    90deg,
+    #e0eeff 0,
+    rgb(162, 221, 244) calc(5vw * 100 / 1920),
+    #8ad9e9 calc(5vw * 100 / 1920),
+    #72b1e8 calc(10vw * 100 / 1920)
+  );
+}
+@keyframes flowleft {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+//从左到右
+.right-left {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-top: calc(2vh * 100 / 1080) solid #00eaf7;
+  border-bottom: calc(2vh * 100 / 1080) solid #00eaf7;
+}
+
+.right-left::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  /* 这里修改线条的高度，同时top减去的值是高度的一半（为了保持垂直居中） */
+  height: 30%;
+  top: 35%;
+  /* 这里修改线条的颜色（可以达到渐变） */
+  background: repeating-linear-gradient(
+    90deg,
+    #ecf5ff 0,
+    #66b1ff calc(5vw * 100 / 1920),
+    #66b1ff calc(5vw * 100 / 1920),
+    #53a8ff calc(10vw * 100 / 1920)
+  );
+  // animation: flowright linear 30s infinite;
+}
+@keyframes flowright {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+.div-animation {
+  height: 18px !important;
+  overflow: hidden;
+}
+.top-animation {
+  width: 18px !important;
+  overflow: hidden;
+}
+
+@mixin animation-left($flow, $s) {
+  animation: $flow linear $s infinite;
+}
+@mixin animation-top($flow, $s) {
+  animation: $flow linear $s infinite;
+}
+.icon-guandao,
+.icon-dianliu,
+.icon-youhailaji-feiqiwenduji,
+.icon-wenshidu,
+.icon-wendu {
+  font-size: 35px;
+}
+.icon-dianliu,
+.icon-wenshidu {
+  color: #409eff;
+}
+.icon-youhailaji-feiqiwenduji,
+.icon-wendu {
+  color: red;
+}
